@@ -23,3 +23,6 @@ router.put('/:id', (req, res) => {
 });
 
 //Delete
+router.delete('/:id', (req, res) => {
+  res.send(`Cancellazione del post con id ${req.params.id}`);
+});

@@ -6,6 +6,9 @@ app.use(express.static('public'))
 
 const port = 3000
 
+const postsRouter = require('./router/posts.js');
+app.use('/posts', postsRouter)
+
 app.get('/', (req, res) => {
   console.log('Server del mio blog')
 })
