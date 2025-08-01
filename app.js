@@ -6,16 +6,16 @@ app.use(express.static('public'))
 
 const port = 3000
 
-const postsRouter = require('./router/posts.js');
-app.use('/posts', postsRouter)
+const postsRouter = require('./routers/posts.js');
+console.log(postsRouter)
+
+app.use('/posts', postsRouter);
 
 app.get('/', (req, res) => {
   console.log('Server del mio blog')
 })
 
-app.listen(port, () => {
-  console.log('Server del mio blog')
-})
+
 
 app.get('/bacheca', (req, res) => {
   const post = [
@@ -47,4 +47,8 @@ app.get('/bacheca', (req, res) => {
     }
   ];
   res.json(post)
+})
+
+app.listen(port, () => {
+  console.log('Server del mio blog')
 })
