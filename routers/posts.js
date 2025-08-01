@@ -18,6 +18,8 @@ router.post('/', (req, res) => {
 });
 
 //Update
-
+router.put('/:id', (req, res) => {
+  res.send(`Modifica totale del post con id ${req.params.id}`);
+});
 
 //Delete
