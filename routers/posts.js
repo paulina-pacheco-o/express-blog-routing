@@ -13,7 +13,9 @@ router.get('/:id', (req, res) => {
 });
 
 //Create
-
+router.post('/', (req, res) => {
+  res.send('Creazione di un nuovo post');
+});
 
 //Update
 
